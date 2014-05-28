@@ -21,7 +21,7 @@ var TranslatorApp = angular.module('TranslatorApp', ['ngRoute','TranslatorContro
  	TranslatorApp.config(['$routeProvider',function ($routeProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: "/views/main.html",
+			templateUrl: "views/main.html",
 			controller: 'MainCtrl'
 		})
 		.otherwise({
