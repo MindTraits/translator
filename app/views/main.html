@@ -1,0 +1,50 @@
+<div class="container-fluid">
+	<div class="header">
+	  <ul class="nav nav-pills pull-right">
+	    <li class="active"><a ng-href="#">Home</a></li>
+	  </ul>
+	  <h3>Translator</h3>
+	</div>
+	
+	
+	<!-- Start of text and conversion div -->
+	
+	<div class="row-fluid">
+		<div class="span12">
+		<div class="row-fluid">
+				<div class="span8">
+	    			<div class="hero-unit"><!-- Start of text div -->
+	    				<h4 class="top">Martin Luther King</h4>
+	    				<pre><span  ng-class="{ 'selected-class-name': $index == selectedIndex }" ng-click="getWord(s,$index)" ng-repeat="s in speech"> {{s}} </span></pre>
+	    			</div><!-- End of text div -->
+	    		</div>
+	    		<div class="span4">
+	    			<div class="hero-unit"><!-- Start of conversion div -->
+	    				<h4 class="top-adj">Conversion</h4>
+	   	    			<label style="color:blue">Word:</label><b>&nbsp{{words}}</b><br/>
+						<label style="color:red">Translation:</label><b>&nbsp{{meaning}}</b><br/>
+						<label style="color:green">Language:</label><b>&nbsp{{clang}}&nbsp({{code}})</b>
+				    </div><!-- End of conversion div -->
+			    </div>
+		    </div>
+		</div>
+	</div>
+	
+	<!-- End of text and conversion div -->
+	
+	<!- Start of Select language DIV -->
+	
+	<div class="row-fluid">
+		<div class="span8">
+			<div class="hero-unit">
+				<div class="pull-left top">
+					<h4 class="">Select Language</h4>	
+					<select  ng-model="language" ng-options="lan for lan in lang" ng-change="getSelected()" ></select><br/>
+					<span>Selected Language:&nbsp{{language}}</span>
+				</div>
+					<img ng-src="images/ang_grunt_yo.png" alt="Smiley face" class="top left-adj" height="120" width="400">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End of select language DIV -->
